@@ -1,0 +1,54 @@
+.days{
+    width: 13.99999999%;
+    display:inline-block;
+    text-align:center;
+    font-size:30rpx;
+    padding:12rpx 0;
+    border:1px solid #eee;
+    margin-left:-1px;
+    margin-bottom:-1px;
+    position:relative;
+    transition:.2s;
+}
+
+.days.active{
+    background:salmon;
+    color:#fff;
+    border:1px solid salmon;
+    z-index:9;
+}
+
+.calendar{
+    margin:0 20px;
+}
+.picker{
+    text-align:center;
+    font-size:28rpx;
+    padding:20rpx 0;
+}
+.views{
+ 
+    font-size:26rpx;
+    margin:0 20px;
+    
+}
+.views-day{
+    width:200rpx;
+    font-size:26rpx;
+    text-align:center;
+    background:salmon;
+    color:#fff;
+    float:left;
+
+}
+.view-day{
+    font-size:34rpx;
+    font-weight:800;
+}
+.views-cont{
+    margin-left:250rpx;
+}
+.view-nl{
+    font-size:23rpx;
+    color:#666;
+}

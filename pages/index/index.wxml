@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='calendar'>
+        <view class='chooseday'>
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" fields="month">
+                <view class="picker">
+                {{selectDay}}
+                </view>
+            </picker>
+        </view>
+        <view class='week-bar'>
+            <view class='days' wx:for="{{weeks}}" wx:key="weeks">
+                {{item}}
+            </view>
+        </view>
+        <block wx:for="{{calendarDay}}" wx:key="calendar" >
+            <view class='days {{(item == day)?"active":""}}' bindtap="{{item!='-'?'getDays':''}}"  id="{{index}}">
+                <view class='view-day'>{{index}}</view>
+                <view class='view-nl'>{{item.lnday}}</view>
+            </view>
+        </block>
+     </view>
+
+     <view class='views'>
+        <view class='views-day'>
+            <view>{{huangli.lunar_gzjn}}年</view>
+            <view>{{huangli.lunar_gzjy}}月{{huangli.lunar_gzjr}}日</view>
+        </view>
+        <view class='views-cont'>
+            <view>宜</view><view>{{huangli.yi}}</view>
+            <view>忌</view><view>{{huangli.yi}}</view>
+         </view>
+     </view>
+</view>
+
